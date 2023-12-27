@@ -1,0 +1,21 @@
+.featured {
+    
+}
+
+.featured h1 {
+    margin-bottom: 25px;
+}
+
+.featured__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
