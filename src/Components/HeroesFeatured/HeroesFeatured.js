@@ -23,14 +23,14 @@ function HeroesFeatured() {
         setFeaturedHeroesList(heroes);
     }
 
-    return (        
+    return (
         <section className="featured">
             <div className="featured__list">
                 {featuredHeroesList.map(({ name, powerstats, imgUrl }) => (
                     <HeroSimplified name={name} powerstats={powerstats} imgUrl={imgUrl} />
                 ))}
             </div>
-        </section>
+        </section>            
     );
 }
 

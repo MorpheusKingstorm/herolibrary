@@ -4,7 +4,7 @@ function HeroSimplified({ name, powerstats, imgUrl }) {
     return (        
         <div className="featured__hero">
             <h2>{name}</h2>
-            <img src={imgUrl} alt={`${name} photo`} className='featured__hero__img'/>
+            <img src={imgUrl} alt={`${name}`} className='featured__hero__img'/>
             <div className="featured__hero__stats">
                 <div>
                     <p>{powerstats.combat}</p>
