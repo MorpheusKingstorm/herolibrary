@@ -1,5 +1,5 @@
-export const boxingIcon = require('./boxing.svg');
-export const durableIcon = require('./durable.svg');
-export const fistIcon = require('./fist.svg');
-export const speedometerIcon = require('./speedometer.svg');
-export const thinkingIcon = require('./thinking.svg');
+export const combat = require('./boxing.svg');
+export const durability = require('./durable.svg');
+export const strength = require('./fist.svg');
+export const speed = require('./speedometer.svg');
+export const intelligence = require('./thinking.svg');

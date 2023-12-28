@@ -26,9 +26,9 @@ function HeroesFeatured() {
     return (
         <section className="featured">
             <div className="featured__list">
-                {featuredHeroesList.map(({ name, powerstats, imgUrl }) => (
+                {featuredHeroesList.map(({ name, powerstats, imgUrl }) => 
                     <HeroSimplified name={name} powerstats={powerstats} imgUrl={imgUrl} />
-                ))}
+                )}
             </div>
         </section>            
     );
