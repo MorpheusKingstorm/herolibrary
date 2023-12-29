@@ -3,3 +3,4 @@ export const durability = require('./durable.svg');
 export const strength = require('./fist.svg');
 export const speed = require('./speedometer.svg');
 export const intelligence = require('./thinking.svg');
+export const power = require('./power.svg');
