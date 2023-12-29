@@ -32,8 +32,8 @@ function HeroesFeatured() {
             {
                 !isLoading && (
                     <div className='featured__list'>
-                        {featuredHeroesList.map(({ name, powerstats, imgUrl }) => 
-                            <HeroSimplified name={name} powerstats={powerstats} imgUrl={imgUrl} />
+                        {featuredHeroesList.map(({ id, name, powerstats, image }) => 
+                            <HeroSimplified key={id} heroId={id} name={name} powerstats={powerstats} image={image} />
                         )}
                     </div>
                 )

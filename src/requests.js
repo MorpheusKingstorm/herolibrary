@@ -15,7 +15,11 @@ export const getBasicHeroInfoById = async id => {
         'combat': powerstatsData.combat,
     };
     
-    return { name: powerstatsData.name, powerstats, imgUrl: imageData.url};
+    return { id: powerstatsData.id, name: powerstatsData.name, powerstats, image: imageData };
+}
+
+export const getDetailedHeroInfoById = id => {
+    return axios.get(`https://superheroapi.com/api/${ACCESS_TOKEN}/${id}`).then(response => response.data);
 }
 
 export const searchHeroesByName = name => {

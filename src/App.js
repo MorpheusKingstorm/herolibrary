@@ -16,7 +16,7 @@ function App() {
               <Route path='/'>
                 <Route index element={<HeroesFeatured />} />
                 <Route path='search/:name' element={<SearchView />} />
-                <Route path='hero/:id' element={<HeroDetailes />} />
+                <Route path='hero/:heroId' element={<HeroDetailes />} />
                 <Route path='*' element={<p>404</p>} />
               </Route>
             </Routes>

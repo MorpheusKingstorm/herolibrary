@@ -1,25 +1,40 @@
 import './HeroSimplified.css';
-import * as icon from '../../assets/icons';
+import { Link } from 'react-router-dom/dist';
+import HeroPowerStats from '../HeroPowerStats/HeroPowerStats';
 
-function HeroSimplified({ name, powerstats, imgUrl }) {
-    const statsElements = Object.entries(powerstats).map(([key, value], index) => (
-        <div key={index}>
-            <img
-                className='featured__hero__stats__icon'
-                src={icon[key].default}
-                alt={key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()}
-            />
-            <p>{value}</p>
-        </div>
-    ));
+function HeroSimplified({ heroId, name, powerstats, image, withLink = true }) {
+    const setDefaultImage = event => {
+        event.target.src = 'https://via.placeholder.com/292x389';
+    };
+
+    const heroContent = (
+        <>
+            <div>
+                <h2>{name}</h2>
+                <img src={image.url} alt={`${name}`} className='featured__hero__img' onError={setDefaultImage} />
+            </div>
+            <div className='featured__hero__stats'>
+                <HeroPowerStats powerstats={powerstats} />
+            </div>
+        </>
+    )
 
     return (
         <div className='featured__hero'>
-            <h2>{name}</h2>
-            <img src={imgUrl} alt={`${name}`} className='featured__hero__img'/>
-            <div className='featured__hero__stats'>
-                {statsElements}
-            </div>
+            {
+                withLink && (
+                    <Link to={`/hero/${heroId}`}>
+                        {heroContent}
+                    </Link>
+                )
+            }
+            {
+                !withLink && (
+                    <>
+                        {heroContent}
+                    </>
+                )
+            }
         </div>
     );
 }
