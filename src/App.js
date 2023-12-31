@@ -4,6 +4,8 @@ import HeroesFeatured from './Components/HeroesFeatured/HeroesFeatured';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SearchView from './Components/SearchView/SearchView';
 import HeroDetailes from './Components/HeroDetailes/HeroDetailes';
+import SearchViewNoResults from './Components/SearchViewNoResults/SearchViewNoResults';
+import PageNotFound from './Components/PageNotFound/PageNotFound';
 
 function App() {
   return (
@@ -16,8 +18,9 @@ function App() {
               <Route path='/'>
                 <Route index element={<HeroesFeatured />} />
                 <Route path='search/:name' element={<SearchView />} />
+                <Route path='search/' element={<SearchViewNoResults />} />
                 <Route path='hero/:heroId' element={<HeroDetailes />} />
-                <Route path='*' element={<p>404</p>} />
+                <Route path='*' element={<PageNotFound />} />
               </Route>
             </Routes>
           </div>

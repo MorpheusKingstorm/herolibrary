@@ -1,0 +1,13 @@
+.page__not__found {
+    text-align: center;
+}
+
+.page__not__found h1 {
+    font-size: 180px;
+    margin: 0;
+}
+
+.page__not__found h2 {
+    font-size: 30px;
+    margin: 0;
+}

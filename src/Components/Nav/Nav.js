@@ -8,8 +8,6 @@ function Nav() {
     const [ searchInputValue, setSearchInputValue ] = useState('');
     const navigate = useNavigate();
 
-    console.log(heroesData);
-
     const onEnterPress = (event) => {
         if (event.key === 'Enter') {
             setSearchInputValue(event.target.value);

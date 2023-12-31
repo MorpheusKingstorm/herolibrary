@@ -4,20 +4,22 @@ import { useParams } from 'react-router';
 import { searchHeroesByName } from '../../requests';
 import HeroSimplified from '../HeroSimplified/HeroSimplified';
 import Loader from '../Loader/Loader';
+import SearchViewNoResults from '../SearchViewNoResults/SearchViewNoResults';
 
 function SearchView() {
     const [ searchList, setSearchListContent ] = useState([]);
     const [ isLoading, setLoadingState ] = useState(true);
     const { name } = useParams();
 
-
     useEffect(() => {
         setLoadingState(true);
+
         searchHeroesByName(name).then(searchResults => {
-            console.log(searchResults)
             const { data } = searchResults;
 
             if(data.error) {
+                setLoadingState(false);
+                setSearchListContent([]);
                 return;
             }
 
@@ -29,8 +31,9 @@ function SearchView() {
 
     return (
         <>
+        
             {
-                !isLoading && (
+                !isLoading && searchList.length > 0 && (
                     <section >
                         <h1>Search for "{name}"</h1>
                         <div className='search'>
@@ -43,10 +46,13 @@ function SearchView() {
                 )
             }
             {
+                !isLoading && searchList.length === 0 && (
+                    <SearchViewNoResults searchValue={name} />
+                )
+            }
+            {
                 isLoading && (
-                    <div className='loader-container'>
-                        <Loader />
-                    </div>
+                    <Loader />
                 )
             }
         </>
