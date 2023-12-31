@@ -13,7 +13,7 @@ function PageNotFound() {
         <>
             {
                 !isLoading && (
-                    <section class='page__not__found'>
+                    <section className='page__not__found'>
                         <div className='container'>
                             <h1>404</h1>
                             <h2>Page not found</h2> 
