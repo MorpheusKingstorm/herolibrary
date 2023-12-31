@@ -19,7 +19,7 @@ function Nav() {
                 <div className="container">
                     <Link to="/"><img className="nav__logo" src={logo} alt="Superhero Database" /></Link>
                     <div className="nav__search">
-                        <input onKeyDown={onEnterPress} onChange={event => {setSearchInputValue(event.target.value)}} value={searchInputValue} type="text" name="search" />
+                        <input onKeyDown={onEnterPress} onChange={event => {setSearchInputValue(event.target.value)}} value={searchInputValue} type="text" name="search" placeholder='Type a hero name' />
                         <Link to={`/search/${searchInputValue}`}><button>Find hero!</button></Link>
                     </div>
                 </div>

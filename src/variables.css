@@ -1,0 +1,6 @@
+:root {
+    --theme-color: rgb(255, 114, 13);
+    --theme-color-dark: rgb(221, 99, 11);
+    --theme-color-dark-alpha-7: rgba(221, 99, 11, .7);
+    --background-color: rgb(27, 27, 27);
+}
