@@ -8,6 +8,16 @@
     background-color: white;
 }
 
+.featured__hero__stats div {
+    padding: 5px 5px 0 5px;
+    border-radius: 20px;
+}
+
+.featured__hero__stats div:hover {
+    background-color: rgba(63, 63, 63, 0.1);
+    cursor: crosshair;
+}
+
 .featured__hero__stats__icon {
     width: 25px;
     margin-bottom: 10px;

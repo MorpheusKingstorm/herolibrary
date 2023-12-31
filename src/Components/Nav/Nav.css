@@ -65,4 +65,5 @@
     height: 20px;
     padding: 10px 10px;
     border-radius: 32px;
+    box-sizing: content-box;
 }

@@ -7,32 +7,32 @@ function HeroSimplified({ heroId, name, powerstats, image, withLink = true }) {
         event.target.src = 'https://via.placeholder.com/292x389';
     };
 
-    const heroContent = (
+    const heroNameAndImage = (
         <>
-            <div>
-                <h2>{name}</h2>
-                <img src={image.url} alt={`${name}`} className='featured__hero__img' onError={setDefaultImage} />
-            </div>
-            <HeroPowerStats powerstats={powerstats} />
+            <h2>{name}</h2>
+            <img src={image.url} alt={`${name}`} className='featured__hero__img' onError={setDefaultImage} />
         </>
-    )
+    );
 
     return (
         <div className='featured__hero'>
-            {
-                withLink && (
-                    <Link to={`/hero/${heroId}`}>
-                        {heroContent}
-                    </Link>
-                )
-            }
-            {
-                !withLink && (
-                    <>
-                        {heroContent}
-                    </>
-                )
-            }
+            <div className='featured__hero__basic__info'>
+                {
+                    withLink && (
+                        <Link to={`/hero/${heroId}`}>
+                            {heroNameAndImage}
+                        </Link>
+                    )
+                }
+                {
+                    !withLink && (
+                        <>
+                            {heroNameAndImage}
+                        </>
+                    )
+                }
+            </div>
+            <HeroPowerStats powerstats={powerstats} />                    
         </div>
     );
 }
