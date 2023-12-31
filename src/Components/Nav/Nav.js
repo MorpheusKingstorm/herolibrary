@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import './Nav.css'
 import logo from '../../assets/img/nav_logo.png';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 function Nav() {
     const [ searchInputValue, setSearchInputValue ] = useState('');
+    const navigate = useNavigate();
 
     const onEnterPress = (event) => {
         if (event.key === 'Enter') {
             setSearchInputValue(event.target.value);
-            window.location.href = `/search/${searchInputValue}`;
+            navigate(`/search/${event.target.value}`);
         }
     };
 

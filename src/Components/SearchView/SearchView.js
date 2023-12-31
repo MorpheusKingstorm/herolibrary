@@ -31,10 +31,14 @@ function SearchView() {
         <>
             {
                 !isLoading && (
-                    <section className='search'>
-                        {searchList.map(({id, powerstats, image, name}) => (
+                    <section >
+                        <h1>Search for "{name}"</h1>
+                        <div className='search'>
+                            {searchList.map(({id, powerstats, image, name}) => (
                             <HeroSimplified key={id} heroId={id} powerstats={powerstats} image={image} name={name} />
-                        ))}
+                            ))}
+                        </div>
+                        
                     </section>            
                 )
             }

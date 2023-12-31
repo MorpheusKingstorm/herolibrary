@@ -29,7 +29,7 @@ function HeroesFeatured() {
     return (
         <section className='featured'>
             <h1>Featured Heroes</h1>
-            {!isLoading ? (
+            {!isLoading && (
                 <div className='featured__list'>
                     {featuredHeroesList.map(({ id, name, powerstats, image }) => (
                         <HeroSimplified
@@ -41,10 +41,9 @@ function HeroesFeatured() {
                         />
                     ))}
                 </div>
-            ) : (
-                <div className='loader-container'>
-                    <Loader />
-                </div>
+            )}
+            {isLoading && (
+                <Loader />
             )}
         </section>
     );
