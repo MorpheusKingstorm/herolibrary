@@ -20,9 +20,9 @@ function HeroPowerStats({ powerstats }) {
     }
 
     return (
-        <>
+        <div className='featured__hero__stats'>
             {statsElements}
-        </>
+        </div>
     );
 }
 

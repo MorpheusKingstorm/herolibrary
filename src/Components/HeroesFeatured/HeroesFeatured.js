@@ -7,8 +7,8 @@ import Loader from '../Loader/Loader';
 const featuredHeroesIds = [4, 253, 391, 146, 121, 131]
 
 function HeroesFeatured() {
-    const [featuredHeroesList, setFeaturedHeroesList] = useState([]);
-    const [isLoading, setLoadingState] = useState(true);
+    const [ featuredHeroesList, setFeaturedHeroesList ] = useState([]);
+    const [ isLoading, setLoadingState ] = useState(true);
 
     useEffect(() => {
         fetchAndRenderFeaturedHeroes();

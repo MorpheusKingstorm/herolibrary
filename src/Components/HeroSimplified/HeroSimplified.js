@@ -13,9 +13,7 @@ function HeroSimplified({ heroId, name, powerstats, image, withLink = true }) {
                 <h2>{name}</h2>
                 <img src={image.url} alt={`${name}`} className='featured__hero__img' onError={setDefaultImage} />
             </div>
-            <div className='featured__hero__stats'>
-                <HeroPowerStats powerstats={powerstats} />
-            </div>
+            <HeroPowerStats powerstats={powerstats} />
         </>
     )
 
