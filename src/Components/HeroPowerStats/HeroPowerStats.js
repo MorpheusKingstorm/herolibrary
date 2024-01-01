@@ -6,8 +6,12 @@ function HeroPowerStats({ powerstats }) {
 
     for (const key in powerstats) {
         if (Object.hasOwnProperty.call(powerstats, key)) {
+            if(isNaN(powerstats[key])) {
+                powerstats[key] = '-';
+            }
+
             statsElements.push(
-                <div key={key}>
+                <div key={key} className={`hero__powerstat__${key}`}>
                     <img
                         className='featured__hero__stats__icon'
                         src={icon[key].default}

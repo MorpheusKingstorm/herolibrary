@@ -22,3 +22,27 @@
     width: 25px;
     margin-bottom: 10px;
 }
+
+.hero__powerstat__combat {
+    order: 0;
+}
+
+.hero__powerstat__strength {
+    order: 1;
+}
+
+.hero__powerstat__power {
+    order: 2;
+}
+
+.hero__powerstat__speed {
+    order: 3;
+}
+
+.hero__powerstat__intelligence {
+    order: 4;
+}
+
+.hero__powerstat__durability {
+    order: 5;
+}
